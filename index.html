@@ -76,6 +76,18 @@
                             <input type="date" name="final-date" id="final-date">
                         </div>
                         
+                        <!-- PASSENGERS: -->
+                        <div class="input-wraps">
+                            <label for="passengers">Passengers</label>
+                            <input type="number" name="passengers" id="passengers" min="1" max="5">
+                        </div>
+                        
+                        <!-- TICKET TYPE: -->
+                        <div class="input-wraps" id="ticket-type-inputs-wrap">
+                            <label for="retur"><input type="radio" name="ticket-type" value="return">Return</label>
+                            <label for="one-way"><input type="radio" name="ticket-type" value="one-way">One way</label>
+                        </div>
+                        
                     </form>
                     <button id="homepage-new-search-submit-button">Search</button>
                 </div>
