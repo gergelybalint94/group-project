@@ -40,6 +40,17 @@ h1 {
 	text-transform:uppercase;
 }
 
+fieldset {
+	margin-bottom:1em !important;
+	padding:1em !important;
+	border:1px solid gray !important;
+}
+
+input,
+select {
+	border:1px solid gray !important;
+}
+
 input[type="range"]{
 	padding:0.2em;
 	background:lightgray;
@@ -160,7 +171,7 @@ input[type="range"]{
 .screen-size-sections {
 	width:100%;
 	height:100vh;
-	background:blue;
+	background:cornflowerblue;
 }
 
 #homepage-section1 {
@@ -173,7 +184,7 @@ input[type="range"]{
 #homepage-first-widgets-container {
 	display:flex;
 	width:100%;
-	background:yellow;
+	background:peachpuff;
 	align-items:stretch;
 	justify-content:space-around;
 }
@@ -304,7 +315,7 @@ input[type="range"]{
 	display:flex;
 	width:100%;
 	padding:1em;
-	background:yellow;
+	background:peachpuff;
 	align-items:stretch;
 	justify-content:space-around;
 }
@@ -318,8 +329,62 @@ input[type="range"]{
 
 #breadcrumb {
 	display:flex;
-	padding:0.5em;
+	height:3em;
+	align-items:stretch;
 	justify-content:space-between;
 	background:gray;
 	color:white;
+}
+
+#breadcrumb .steps {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:0.5em;
+}
+
+#breadcrumb .active {
+	background:darkgray;
+}
+
+.payment-step-warnings {
+	background:yellow;
+}
+
+#paymentpage-flight-info .rows,
+#paymentpage-payment-form .rows {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+#paymentpage-flight-info .row-titles:after {
+	content:':';
+}
+
+#phone-inputs-wrap {
+	flex-direction:row;
+}
+
+#phone-inputs-wrap #prefix {
+	min-width:3em; /* for fixing width on resizing flexbox */
+	max-width:3em; /* for fixing width on resizing flexbox */
+	margin-right:0.5em;
+}
+
+#contact-info-container {
+	display:flex;
+	width:100%;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.breadcrumb-nav-buttons {
+	width:100%;
+	padding:1em;
+	background:darkviolet;
+}
+
+.breadcrumb-nav-buttons:first-of-type {
+	margin-right:1em;
 }
