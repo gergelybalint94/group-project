@@ -1,36 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>Custom element</title>
-	<script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
-	<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+    <meta charset="UTF-8">
+    <title>Apple Juice</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<button type="button" class="add" name="button">Add</button>
-<button type="button" class="remove" name="button">Remove</button>
-	<div id="container">
-		
-	</div>
 
-	<dom-module id="my-element">
-		<template>
-			<div>
-				hello sdkfjhjskhdfjksdhfjkskjdhfdhfhsdhfkjsh
-			</div>
-		</template>
-	</dom-module>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<script type="text/javascript">
-		HTMLImports.whenReady(function(){
-			Polymer({
-				is: "my-element"
-			})
-		});
-		$(".add").on("click",function(){
-			$("#container").append("my-element");
-		});
-	</script>
-
-</body>
+    <body>
+    	<div id="main-nav-menu-wrap">
+        	<div id="site-logo"></div>
+        	<nav id="main-nav-menu">
+            	<a href="#">Packages</a>
+            	<a href="#">Account</a>
+            	<a href="#">Login</a>
+            	<a href="#">Registration</a>
+            </nav>
+        </div>
+        
+        <div class="page-content-wraps">
+            <div id="homepage-first-widgets-container">
+                <div class="homepage-first-widgets" id="homepage-widget-search-new">sd</div>
+                <div class="homepage-first-widgets" id="homepage-widget-history"></div>
+                <div class="homepage-first-widgets" id="homepage-widget-packages"></div>
+            </div>
+        </div>
+    </body>
 </html>
