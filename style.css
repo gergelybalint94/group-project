@@ -274,3 +274,43 @@ input[type="range"]{
 	background:green;
 	width:100%;
 }
+
+
+
+
+
+
+
+
+
+/* ============================================== */
+/* PAYMENT PAGE:
+/* ============================================== */
+
+#paymentpage-section1 {
+	padding-top:60px; /* same as '#main-header-bar-wrap' height */
+}
+
+#paymentpage-widget-container { /* same properties as '#homepage-first-widgets-container' has */
+	display:flex;
+	width:100%;
+	padding:1em;
+	background:yellow;
+	align-items:stretch;
+	justify-content:space-around;
+}
+
+#paymentpage-content-wrap {
+	display:flex;
+	width:600px;
+	flex-direction:column;
+	background:white;
+}
+
+#breadcrumb {
+	display:flex;
+	padding:0.5em;
+	justify-content:space-between;
+	background:gray;
+	color:white;
+}
