@@ -1,0 +1,88 @@
+* {
+	margin:0;
+	padding:0;
+	font-size:16px;
+	appearance:none;
+	-o-appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	box-sizing:border-box;
+	border:none;
+	border-radius:0;
+	font-family:'Quicksand', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* ============================================== */
+/* GLOBAL STYLE:
+/* ============================================== */
+
+html,
+body {
+	width:100%;
+	height:100%;
+	min-width:100vw;
+	min-height:100vh;
+	background:purple;
+}
+
+.page-content-wraps {
+	display:block;
+	width:100%;
+	height:100vh;
+	padding-top:60px; /* same as navigation menu height */
+	background:green;
+}
+
+
+
+
+
+
+
+
+
+/* ============================================== */
+/* NAVIGATION MENU BAR:
+/* ============================================== */
+
+#site-logo {
+	width:100px;
+	height:100%;
+	background:coral;
+}
+
+#main-nav-menu-wrap {
+	display:flex;
+	position:absolute;
+	top:0;
+	left:0;
+	align-items:center;
+	justify-content:space-between;
+	width:100%;
+	height:60px;
+	padding:0 1em;
+	background:red;
+}
+
+
+
+
+
+
+
+
+
+/* ============================================== */
+/* HOME PAGE:
+/* ============================================== */
+
+#homepage-first-widgets-container {
+}
