@@ -26,19 +26,61 @@
 
 html,
 body {
+	display:flex;
 	width:100%;
 	height:100%;
 	min-width:100vw;
 	min-height:100vh;
-	background:purple;
+	//background:purple;
+	justify-content:center;
+}
+
+h1 {
+	margin:0.5em;
+	text-transform:uppercase;
 }
 
 .page-content-wraps {
 	display:block;
 	width:100%;
-	height:100vh;
-	padding-top:60px; /* same as navigation menu height */
-	background:green;
+	height:100%;
+	max-width:1280px;
+	//background:green;
+}
+
+.input-wraps {
+	display:flex;
+	margin-bottom:1em;
+	flex-direction:column;
+}
+
+.list-items {
+	list-style:none;
+	margin-bottom:1em;
+}
+
+.list-item-rows {
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+.more-boxes {
+	display:flex;
+	width:100%;
+	height:2em;
+	background:lightgray;
+	align-items:center;
+	justify-content:center;
+	cursor:pointer;
+}
+
+.more-boxes .circles {
+	width:0.3em;
+	height:0.3em;
+	margin:0.1em;
+	border-radius:100%;
+	background:gray;
 }
 
 
@@ -59,17 +101,37 @@ body {
 	background:coral;
 }
 
-#main-nav-menu-wrap {
+#main-header-bar-wrap {
 	display:flex;
 	position:absolute;
 	top:0;
 	left:0;
 	align-items:center;
-	justify-content:space-between;
+	justify-content:center;
 	width:100%;
 	height:60px;
+	background:brown;
+}
+
+#main-header-bar {
+	display:flex;
+	width:100%;
+	height:100%;
+	max-width:1280px;  /* same as '.page-content-wraps' max-width */
 	padding:0 1em;
-	background:red;
+	align-items:center;
+	justify-content:space-between;
+	//background:grey;
+}
+
+.retur-markers,
+.class-markers {
+	width:1.5em;
+	height:1.5em;
+	min-width:1.5em;
+	min-height:1.5em;
+	margin:0.5em;
+	background:orange;
 }
 
 
@@ -84,5 +146,73 @@ body {
 /* HOME PAGE:
 /* ============================================== */
 
+.screen-size-sections {
+	width:100%;
+	height:100vh;
+	background:blue;
+}
+
+#homepage-section1 {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding-top:60px; /* same as '#main-header-bar-wrap' height */
+}
+
 #homepage-first-widgets-container {
+	display:flex;
+	width:100%;
+	background:yellow;
+	align-items:stretch;
+	justify-content:space-around;
+}
+
+.homepage-first-widgets {
+	display:flex;
+	min-width:300px;
+	max-width:300px;
+	flex-direction:column;
+	justify-content:space-between;
+	overflow:hidden;
+	background:purple;
+}
+
+.homepage-first-widgets .widget-main-content {
+	height:340px;
+	background:red;
+}
+
+#homepage-history-list .list-items {
+	background:white;
+}
+
+#homepage-history-list .flight-details {
+	display:flex;
+	align-items:center;
+	background:lightgray;
+	width:100%;
+	justify-content:space-between;
+}
+
+#homepage-history-list .search-similar-links {
+	padding:0.5em;
+}
+
+#homepage-package-list .list-items {
+	display:flex;
+	height:4em;
+	margin:0;
+	border-bottom:1px solid lightgray;
+	align-items:center;
+	justify-content:space-between;
+	background:white;
+}
+
+#homepage-package-list .right-angles {
+	display:flex;
+	width:1em;
+	height:100%;
+	align-items:center;
+	justify-content:center;
+	background:orange;
 }
