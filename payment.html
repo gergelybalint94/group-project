@@ -55,10 +55,10 @@
             
                     <!-- FLIGHT CONFIRMATION:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:none" class="main-content-of-payment-steps" id="flight-confirmation">
+                    <div style="display:none" class="main-content-of-payment-steps" id="flight-confirmation-content-wrap">
                     	<h1 class="payment-step-titles">Your flight</h1>
                         <p class="payment-step-warnings">Check all your flight information carefully. Confirm that every detail is correct by clicking on proceed button. You can not modify flight info after you submit your payment.</p>
-                        <div id="paymentpage-flight-info">
+                        <div class="paymentpage-confirmations" id="flight-confirmation">
                         
                         	<div class="rows">
                             	<span class="row-titles">Origin</span>
@@ -73,6 +73,21 @@
                         	<div class="rows">
                             	<span class="row-titles">Ticket type</span>
                                 <span id="ticket-type">Return</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Airline</span>
+                                <span id="airline">Russian</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Flight number forth</span>
+                                <span id="flight-number-forth">#RUS14417</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Flight number back</span>
+                                <span id="flight-number-back">#RUS14418</span>
 							</div>
                             
                         	<div class="rows">
@@ -106,7 +121,7 @@
             
                     <!-- PAYMENT DETAILS:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:block" class="main-content-of-payment-steps" id="payment-details">
+                    <div style="display:none" class="main-content-of-payment-steps" id="payment-details">
                     	<h1 class="payment-step-titles">Payment details</h1>
                         <form id="paymentpage-payment-form">
                         
@@ -208,6 +223,42 @@
                                 <button class="breadcrumb-nav-buttons">Next</button>
                             </div>
                         </form>
+                    </div>
+            
+            
+            
+                    <!-- PAYMENT CONFIRMATION:
+                    <!-- //////////////////////////////////// -->
+                    <div style="display:none" class="main-content-of-payment-steps" id="payment-confirmation-content-wrap">
+                    	<h1 class="payment-step-titles">Your flight</h1>
+                        <p class="payment-step-warnings">Check all your payment information carefully. If everything seems correct, confirm payment by clicking on the checkout button. After this point there is no way to modify payment and flight data.</p>
+                        <div class="paymentpage-confirmations" id="payment-confirmation">
+                        
+                        	<div class="rows">
+                            	<span class="row-titles">Name on card</span>
+                                <span id="confirmation-name">Bálint Gergely</span>
+                            </div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Credit card</span>
+                                <span id="confirmation-card">4071 2105 9923 2394</span>
+                            </div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Item</span>
+                                <span id="confirmation-item">1 x Airplane Ticket</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Price</span>
+                                <span id="confirmation-price">299kr</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<button class="breadcrumb-nav-buttons">Modify</button>
+                            	<button class="breadcrumb-nav-buttons">Checkout</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
