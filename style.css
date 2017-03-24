@@ -351,14 +351,14 @@ input[type="range"]{
 	background:yellow;
 }
 
-#paymentpage-flight-info .rows,
+.paymentpage-confirmations .rows,
 #paymentpage-payment-form .rows {
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
 }
 
-#paymentpage-flight-info .row-titles:after {
+.paymentpage-confirmations .row-titles:after {
 	content:':';
 }
 
