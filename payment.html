@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Apple Juice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+        
+        
+        
+        
+        
+        
+        
+<body>
+    
+    <!-- =============================================================================== -->
+    <!-- NAVIGATION MENU (ABSOLUTE POSITIONED):
+    <!-- =============================================================================== -->
+    
+    <div id="main-header-bar-wrap">
+        <div id="main-header-bar">
+            <div id="site-logo"></div>
+            <nav id="main-nav-menu">
+                <a href="#">Packages</a>
+                <a href="#">Account</a>
+                <a href="#">Login</a>
+                <a href="#">Registration</a>
+            </nav>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="page-content-wraps">
+    
+        <!-- =============================================================================== -->
+        <!-- MAIN HOMEPAGE CONTENT (SEARCH, HISTORY, SAVED PACKAGES...):
+        <!-- =============================================================================== -->
+    
+        <section class="screen-size-sections" id="paymentpage-section1">
+            <div id="paymentpage-widget-container">
+                <div id="paymentpage-content-wrap">
+                	<h1>Payment</h1>
+                    <div id="breadcrumb">
+                    	<div class="steps active">Flight confirmation</div>
+                    	<div class="steps">Payment details</div>
+                    	<div class="steps">Payment confirmation</div>
+                    </div>
+            
+            
+            
+                    <!-- FLIGHT CONFIRMATION:
+                    <!-- //////////////////////////////////// -->
+                    <div style="display:none" class="main-content-of-payment-steps" id="flight-confirmation-content-wrap">
+                    	<h1 class="payment-step-titles">Your flight</h1>
+                        <p class="payment-step-warnings">Check all your flight information carefully. Confirm that every detail is correct by clicking on proceed button. You can not modify flight info after you submit your payment.</p>
+                        <div class="paymentpage-confirmations" id="flight-confirmation">
+                        
+                        	<div class="rows">
+                            	<span class="row-titles">Origin</span>
+                                <span id="flight-origin">Barcelona</span>
+                            </div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Destination</span>
+                                <span id="flight-destination">New Jersey</span>
+                            </div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Ticket type</span>
+                                <span id="ticket-type">Return</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Airline</span>
+                                <span id="airline">Russian</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Flight number forth</span>
+                                <span id="flight-number-forth">#RUS14417</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Flight number back</span>
+                                <span id="flight-number-back">#RUS14418</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Departure forth</span>
+                                <span id="departure-forth">19/MAR/2017</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Departure back</span>
+                                <span id="departure-back">23/MAR/2017</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Passengers</span>
+                                <span id="passengers">2</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Class</span>
+                                <span id="flight-class">Business class</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<button class="breadcrumb-nav-buttons">Modify</button>
+                            	<button class="breadcrumb-nav-buttons">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+            
+                    <!-- PAYMENT DETAILS:
+                    <!-- //////////////////////////////////// -->
+                    <div style="display:none" class="main-content-of-payment-steps" id="payment-details">
+                    	<h1 class="payment-step-titles">Payment details</h1>
+                        <form id="paymentpage-payment-form">
+                        
+                        	<!-- ===== CREDIT CARD INFO ===== -->
+                        	<fieldset>
+                        		<legend>Credit card information</legend>
+                                
+                                <!-- FULL NAME: -->
+                                <div class="input-wraps">
+                                    <label for="card-full-name">Name on credit card</label>
+                                    <input type="text" name="card-full-name" id="card-full-name">
+                                </div>
+                            
+                                <!-- CARD NUMBER: -->
+                                <div class="input-wraps">
+                                    <label for="full-name">Credit card number</label>
+                                    <input type="text" name="card-number" id="card-number">
+                                </div>
+                            
+                                <!-- SECURITY CODE: -->
+                                <div class="input-wraps">
+                                    <label for="full-name">Security code</label>
+                                    <input type="text" name="security-code" id="security-code">
+                                </div>
+                            </fieldset>
+                            
+                            
+                            
+                            
+                            
+                            <!-- ===== BILLING INFO ===== -->
+                        	<fieldset>
+                        		<legend>Billing information</legend>
+                                
+                                <!-- FULL NAME: -->
+                                <div class="input-wraps">
+                                    <label for="address-full-name">Full name</label>
+                                    <input type="text" name="address-full-name" id="address-full-name">
+                                </div>
+                            
+                                <!-- ADDRESS: -->
+                                <div class="input-wraps">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" id="address" placeholder="Street, house number, floor, door, etc.">
+                                </div>
+                            
+                                <!-- CITY: -->
+                                <div class="input-wraps">
+                                    <label for="city">City</label>
+                                    <input type="text" name="city" id="city">
+                                </div>
+                            
+                                <!-- STATE: -->
+                                <div class="input-wraps">
+                                    <label for="state">State</label>
+                                    <input type="text" name="state" id="state">
+                                </div>
+                            
+                                <!-- COUNTRY: -->
+                                <div class="input-wraps">
+                                    <label for="country">Country</label>
+                                    <input type="text" name="country" id="country">
+                                </div>
+                            
+                                <!-- POSTAL CODE: -->
+                                <div class="input-wraps">
+                                    <label for="post-code">Postal code</label>
+                                    <input type="text" name="post-code" id="post-code">
+                                </div>
+                            </fieldset>
+                            
+                            
+                            
+                            
+                            
+                            <!-- ===== CONTACT INFO ===== -->
+                        	<fieldset>
+                        		<legend>Contact information</legend>
+                                <div id="contact-info-container">
+                                    <!-- EMAIL: -->
+                                    <div class="input-wraps">
+                                        <label for="email">Email address</label>
+                                        <input type="email" name="email" id="email">
+                                    </div>
+                                
+                                    <!-- PHONE: -->
+                                    <div>
+                                        <label for="phone">Phone number</label>
+                                        <div class="input-wraps" id="phone-inputs-wrap">
+                                            <input type="text" name="prefix" id="prefix" placeholder="+45">
+                                            <input type="text" name="phone" id="phone" placeholder="12345678">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                                
+                            <div class="rows">
+                                <button class="breadcrumb-nav-buttons">Back</button>
+                                <button class="breadcrumb-nav-buttons">Next</button>
+                            </div>
+                        </form>
+                    </div>
+            
+            
+            
+                    <!-- PAYMENT CONFIRMATION:
+                    <!-- //////////////////////////////////// -->
+                    <div style="display:none" class="main-content-of-payment-steps" id="payment-confirmation-content-wrap">
+                    	<h1 class="payment-step-titles">Your flight</h1>
+                        <p class="payment-step-warnings">Check all your payment information carefully. If everything seems correct, confirm payment by clicking on the checkout button. After this point there is no way to modify payment and flight data.</p>
+                        <div class="paymentpage-confirmations" id="payment-confirmation">
+                        
+                        	<div class="rows">
+                            	<span class="row-titles">Name on card</span>
+                                <span id="confirmation-name">Bálint Gergely</span>
+                            </div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Credit card</span>
+                                <span id="confirmation-card">4071 2105 9923 2394</span>
+                            </div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Item</span>
+                                <span id="confirmation-item">1 x Airplane Ticket</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<span class="row-titles">Price</span>
+                                <span id="confirmation-price">299kr</span>
+							</div>
+                            
+                        	<div class="rows">
+                            	<button class="breadcrumb-nav-buttons">Modify</button>
+                            	<button class="breadcrumb-nav-buttons">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

@@ -1,36 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>Custom element</title>
-	<script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
-	<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+    <meta charset="UTF-8">
+    <title>Apple Juice</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+        
+        
+        
+        
+        
+        
+        
 <body>
-<button type="button" class="add" name="button">Add</button>
-<button type="button" class="remove" name="button">Remove</button>
-	<div id="container">
-		
-	</div>
-
-	<dom-module id="my-element">
-		<template>
-			<div>
-				hello sdkfjhjskhdfjksdhfjkskjdhfdhfhsdhfkjsh
-			</div>
-		</template>
-	</dom-module>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<script type="text/javascript">
-		HTMLImports.whenReady(function(){
-			Polymer({
-				is: "my-element"
-			})
-		});
-		$(".add").on("click",function(){
-			$("#container").append("my-element");
-		});
-	</script>
-
+    
+    <!-- =============================================================================== -->
+    <!-- NAVIGATION MENU (ABSOLUTE POSITIONED):
+    <!-- =============================================================================== -->
+    
+    <div id="main-header-bar-wrap">
+        <div id="main-header-bar">
+            <div id="site-logo"></div>
+            <nav id="main-nav-menu">
+                <a href="#">Packages</a>
+                <a href="#">Account</a>
+                <a href="#">Login</a>
+                <a href="#">Registration</a>
+            </nav>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="page-content-wraps">
+    
+        <!-- =============================================================================== -->
+        <!-- MAIN HOMEPAGE CONTENT (SEARCH, HISTORY, SAVED PACKAGES...):
+        <!-- =============================================================================== -->
+    
+        <section class="screen-size-sections" id="homepage-section1">
+            <div id="homepage-first-widgets-container">
+            
+            
+            
+            	<!-- WIDGET FOR NEW FLIGHT SEARCH:
+                <!-- //////////////////////////////////// -->
+                <div class="homepage-first-widgets" id="homepage-widget-search-new">
+                	<h1 class="homepage-widget-titles">New Search</h1>
+                    <form class="widget-main-content" id="homepage-new-search-form">
+                    
+                    	<!-- FROM: -->
+                    	<div class="input-wraps">
+                            <label for="start-destination">From</label>
+                            <input type="text" name="start-destination" id="start-destination">
+                        </div>
+                        
+                        <!-- TO: -->
+                        <div class="input-wraps">
+                            <label for="final-destination">To</label>
+                            <input type="text" name="final-destination" id="final-destination">
+                        </div>
+                        
+                        <!-- DEPARTURE: -->
+                        <div class="input-wraps">
+                            <label for="start-date">Departure</label>
+                            <input type="date" name="start-date" id="start-date">
+                        </div>
+                        
+                        <!-- ARRIVAL: -->
+                        <div class="input-wraps">
+                            <label for="final-date">Arrival</label>
+                            <input type="date" name="final-date" id="final-date">
+                        </div>
+                        
+                        <!-- PASSENGERS: -->
+                        <div class="input-wraps">
+                            <label for="passengers">Passengers</label>
+                            <input type="number" name="passengers" id="passengers" min="1" max="5">
+                        </div>
+                        
+                        <!-- TICKET TYPE: -->
+                        <div class="input-wraps" id="ticket-type-inputs-wrap">
+                            <label for="retur"><input type="radio" name="ticket-type" value="return">Return</label>
+                            <label for="one-way"><input type="radio" name="ticket-type" value="one-way">One way</label>
+                        </div>
+                        
+                    </form>
+                    <button id="homepage-new-search-submit-button">Search</button>
+                </div>
+            
+            
+            
+            	<!-- WIDGET FOR FLIGHT HISTORY:
+                <!-- //////////////////////////////////// -->
+                <div class="homepage-first-widgets" id="homepage-widget-history">
+                	<h1 class="homepage-widget-titles">Previously booked</h1>
+                    <ul class="widget-main-content" id="homepage-history-list">
+                    	<li class="list-items">
+                        	
+                            <div class="list-item-rows">
+                                <!-- ITEM TITLE: -->
+                                <div class="item-titles">
+                                    <span class="start-destinations">Barcelona</span>
+                                    -
+                                    <span class="final-destinations">New Jersey</span>
+                                </div>
+                        	
+                                <!-- RETUR TICKET MARKER: -->
+                                <div class="retur-markers" data-flight-retur="true"></div>
+                            </div>
+                        	
+                            <div class="list-item-rows">
+                                <!-- FORTH FLIGHT INFO: -->
+                                <div class="flight-details forth-flight-details">
+                                    <span class="flight-numbers">#RUS1817</span>
+                                    <span class="flight-dates">19/03/2017</span>
+                                    <span class="airlines">Russian</span>
+                                    <div class="class-markers" data-flight-class="first-class"></div>
+                                </div>
+							</div>
+                        	
+                            <div class="list-item-rows">
+                            	<!-- BACK FLIGHT INFO: -->
+                                <div class="flight-details back-flight-details">
+                                    <span class="flight-numbers">#RUS1818</span>
+                                    <span class="flight-dates">23/03/2017</span>
+                                    <span class="airlines">Russian</span>
+                                    <div class="class-markers" data-flight-class="first-class"></div>
+                                </div>
+                            </div>
+                        	
+                            <a href="#" class="list-item-rows search-similar-links">SEARCH SIMILAR FLIGHT AGAIN</a>
+                            
+                        </li>
+                    	<li class="list-items">
+                        	
+                            <div class="list-item-rows">
+                                <!-- ITEM TITLE: -->
+                                <div class="item-titles">
+                                    <span class="start-destinations">Barcelona</span>
+                                    -
+                                    <span class="final-destinations">New Jersey</span>
+                                </div>
+                        	
+                                <!-- RETUR TICKET MARKER: -->
+                                <div class="retur-markers" data-flight-retur="true"></div>
+                            </div>
+                        	
+                            <div class="list-item-rows">
+                                <!-- FORTH FLIGHT INFO: -->
+                                <div class="flight-details forth-flight-details">
+                                    <span class="flight-numbers">#RUS1817</span>
+                                    <span class="flight-dates">19/03/2017</span>
+                                    <span class="airlines">Russian</span>
+                                    <div class="class-markers" data-flight-class="first-class"></div>
+                                </div>
+							</div>
+                        	
+                            <div class="list-item-rows">
+                            	<!-- BACK FLIGHT INFO: -->
+                                <div class="flight-details back-flight-details">
+                                    <span class="flight-numbers">#RUS1818</span>
+                                    <span class="flight-dates">23/03/2017</span>
+                                    <span class="airlines">Russian</span>
+                                    <div class="class-markers" data-flight-class="first-class"></div>
+                                </div>
+                            </div>
+                        	
+                            <a href="#" class="list-item-rows search-similar-links">SEARCH SIMILAR FLIGHT AGAIN</a>
+                            
+                        </li>
+                    </ul>
+                    <div class="more-boxes">
+                    	<div class="circles"></div>
+                    	<div class="circles"></div>
+                    	<div class="circles"></div>
+                    </div>
+                </div>
+            
+            
+            
+            	<!-- WIDGET FOR SAVED PACKAGES:
+                <!-- //////////////////////////////////// -->
+                <div class="homepage-first-widgets" id="homepage-widget-packages">
+                	<h1 class="homepage-widget-titles">Saved packages</h1>
+                    <ul class="widget-main-content" id="homepage-package-list">
+                    	<li class="list-items">
+                        
+                        	<div class="item-titles">My package name</div>
+                            <div class="right-angles">></div>
+                            
+                        </li>
+                    	<li class="list-items">
+                        
+                        	<div class="item-titles">My package name</div>
+                            <div class="right-angles">></div>
+                            
+                        </li>
+                    	<li class="list-items">
+                        
+                        	<div class="item-titles">My package name</div>
+                            <div class="right-angles">></div>
+                            
+                        </li>
+                    	<li class="list-items">
+                        
+                        	<div class="item-titles">My package name</div>
+                            <div class="right-angles">></div>
+                            
+                        </li>
+                    	<li class="list-items">
+                        
+                        	<div class="item-titles">My package name</div>
+                            <div class="right-angles">></div>
+                            
+                        </li>
+                    	<li class="list-items">
+                        
+                        	<div class="item-titles">My package name</div>
+                            <div class="right-angles">></div>
+                            
+                        </li>
+                    </ul>
+                    <div class="more-boxes">
+                    	<div class="circles"></div>
+                    	<div class="circles"></div>
+                    	<div class="circles"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
 </body>
 </html>
