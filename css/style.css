@@ -135,7 +135,7 @@ button:hover {
   background-image: url("../img/logo.png");
   background-size: 45px 45px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 30px;
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 10px;
@@ -403,9 +403,9 @@ button:hover {
   display: flex;
   width: 100%;
   padding: 1em;
-  background: peachpuff;
   align-items: stretch;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border-radius: 3px; }
 
 #paymentpage-content-wrap {
   display: flex;
@@ -482,7 +482,7 @@ button:hover {
     background-size: 50px 50px;
     margin: 10px;
     background-color: white;
-    border-radius: 5px; }
+    border-radius: 30px; }
 
   #main-nav-menu {
     flex-direction: row;
