@@ -55,7 +55,7 @@
             
                     <!-- FLIGHT CONFIRMATION:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:block" class="main-content-of-payment-steps" id="flight-confirmation-content-wrap">
+                    <div style="display:none" class="main-content-of-payment-steps" id="flight-confirmation-content-wrap">
                     	<h1 class="payment-step-titles">Your flight</h1>
                         <p class="payment-step-warnings">Check all your flight information carefully. Confirm that every detail is correct by clicking on proceed button. You can not modify flight info after you submit your payment.</p>
                         <div class="paymentpage-confirmations" id="flight-confirmation">
@@ -121,13 +121,13 @@
             
                     <!-- PAYMENT DETAILS:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:none" class="main-content-of-payment-steps" id="payment-details">
+                    <div style="display:block" class="main-content-of-payment-steps" id="payment-details">
                     	<h1 class="payment-step-titles">Payment details</h1>
                         <form id="paymentpage-payment-form">
                         
                         	<!-- ===== CREDIT CARD INFO ===== -->
-                        	<fieldset>
-                        		<legend>Credit card information</legend>
+                        	<div class="fieldset">
+                        		<h3>Credit card information</h3>
                                 
                                 <!-- FULL NAME: -->
                                 <div class="input-wraps">
@@ -146,15 +146,15 @@
                                     <label for="full-name">Security code</label>
                                     <input type="text" name="security-code" id="security-code">
                                 </div>
-                            </fieldset>
+                            </div class="fieldset">
                             
                             
                             
                             
                             
                             <!-- ===== BILLING INFO ===== -->
-                        	<fieldset>
-                        		<legend>Billing information</legend>
+                        	<div class="fieldset">
+                        		<h3>Billing information</h3>
                                 
                                 <!-- FULL NAME: -->
                                 <div class="input-wraps">
@@ -191,15 +191,15 @@
                                     <label for="post-code">Postal code</label>
                                     <input type="text" name="post-code" id="post-code">
                                 </div>
-                            </fieldset>
+                            </div class="fieldset">
                             
                             
                             
                             
                             
                             <!-- ===== CONTACT INFO ===== -->
-                        	<fieldset>
-                        		<legend>Contact information</legend>
+                        	<div class="fieldset">
+                        		<h3>Contact information</h3>
                                 <div id="contact-info-container">
                                     <!-- EMAIL: -->
                                     <div class="input-wraps">
@@ -216,7 +216,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </fieldset>
+                            </div class="fieldset">
                                 
                             <div class="rows">
                                 <button class="breadcrumb-nav-buttons">Back</button>

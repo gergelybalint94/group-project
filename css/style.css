@@ -37,13 +37,21 @@ h1 {
   font-size: 1.2em !important;
   text-align: center; }
 
-fieldset {
-  margin-bottom: 1em !important;
-  padding: 1em !important;
-  border: 1px solid gray !important; }
+h3 {
+  text-transform: uppercase;
+  font-size:1em;
+  margin-bottom:0.5em !important;
+}
+
+.fieldset {
+  margin: 1em 0 !important;
+  padding: 2em !important;
+  border: 1px solid gray !important;
+  background:rgba(255,255,255,0.9);
+  color:black; }
 
 input:not([type="radio"]), select {
-  min-width: 250px;
+  min-width: 150px;
   height: 25px;
   border-radius: 2px; }
 
@@ -493,7 +501,7 @@ button:hover {
   padding: 1em;
   flex-direction: row;
   justify-content: space-between;
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.9); /* same as fieldset */
   color:black;
   border-bottom:1px solid gray }
   
@@ -511,10 +519,8 @@ button:hover {
   flex-direction: row; }
 
 #phone-inputs-wrap #prefix {
-  min-width: 3em;
-  /* for fixing width on resizing flexbox */
-  max-width: 3em;
-  /* for fixing width on resizing flexbox */
+	min-width:3em;
+	max-width:3em;
   margin-right: 0.5em; }
 
 #contact-info-container {
@@ -522,6 +528,32 @@ button:hover {
   width: 100%;
   flex-direction: row;
   justify-content: space-between; }
+
+#contact-info-container div {
+	display:flex;
+	width:50%;
+	flex-direction:column;
+}
+
+#contact-info-container div {
+	display:flex;
+	width:50%;
+	flex-direction:column;
+}
+
+#contact-info-container div:first-of-type {
+	margin-right:1em;
+}
+
+#contact-info-container div .input-wraps {
+	display:flex;
+	width:100%;
+	flex-direction:row;
+}
+
+#contact-info-container div .input-wraps #phone {
+	width:100%;
+}
 
 .breadcrumb-nav-buttons {
   width: 100%;
