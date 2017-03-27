@@ -58,8 +58,7 @@ input[type="range"] {
 .input-wraps {
   display: flex;
   margin-bottom: 1.4em;
-  flex-direction: row;
-  justify-content: space-between; }
+  flex-direction: column; }
 
 .list-items {
   list-style: none;
@@ -215,7 +214,6 @@ button:hover {
   /* same as '#main-header-bar-wrap' height */ }
 
 #homepage-first-widgets-container {
-  position: absolute;
   top: 0;
   margin-top: 50px;
   display: flex;
@@ -313,22 +311,38 @@ button:hover {
 
 #search-filter-wrap {
   background: rgba(255, 255, 255, 0.8);
-  min-width: 450px;
   /* use min-width so flex-box won't collapse it on resize! */
-  max-width: 500px;
-  margin-right: 1em;
+  margin:0 1em 30px 0;
   padding: 10px;
   border-radius: 3px;
-  margin-bottom: 30px; }
+  max-width: 780px; /* same as #search-results-wrap */
+  min-width: 0; /* same as #search-results-wrap */ }
 
 #search-results-wrap {
   background: rgba(0, 0, 25, 0.9);
   color: white;
   padding: 10px;
-  min-width: 750px;
+  width:65%;
+  min-width: 400px;
   max-width: 780px;
   border-radius: 3px;
-  margin-bottom: 30px; }
+  margin-bottom:30px; }
+  
+@media screen and (max-width: 859px){
+    #search-filter-wrap {
+		width: 100%;
+  		min-width: 400px; /* same as #search-results-wrap */
+    	margin: 30px 0 0 0;
+		border-bottom-left-radius:0;
+		border-bottom-right-radius:0;
+	}
+	
+	#search-results-wrap{
+		width:100%;
+		border-top-left-radius:0;
+		border-top-right-radius:0;
+	}
+}
 
 #search-filter-form {
   display: flex;
@@ -381,15 +395,51 @@ button:hover {
   background: rgba(255, 255, 255, 0.4); }
 
 #search-results {
+	display:flex;
   width: 100%;
   text-align: left;
   padding: 10px;
   margin-top: 10px;
-  border-radius: 3px; }
+  border-radius: 3px;
+	flex-direction:column;
+   }
 
-#search-results th {
+#search-results .tr {
+	display:flex;
+		flex-direction:row;
+	justify-content:space-between;
+}
+
+#search-results .th {
+	display:block;
+	margin:0.5em;
   font-weight: 400 !important;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  	text-align:center;
+  	flex:1;
+	flex-basis:17.5% }
+
+#search-results .td {
+	display:block;
+	margin:1px;
+  background:rgba(255,0,4,0.15);
+  padding:0.5em;
+  	text-align:center;
+  	flex:1;
+	flex-basis:17.5%; }
+	
+@media screen and (max-width: 1030px){
+	#search-results .td:nth-child(2),
+	#search-results .td:nth-child(4),
+	#search-results .td:nth-child(5),
+	#search-results .td:nth-child(6),
+	#search-results .th:nth-child(2),
+	#search-results .th:nth-child(4),
+	#search-results .th:nth-child(5),
+	#search-results .th:nth-child(6){
+		display:none
+	}
+}
 
 /* ============================================== */
 /* PAYMENT PAGE:
@@ -405,13 +455,15 @@ button:hover {
   padding: 1em;
   align-items: stretch;
   justify-content: space-around;
-  border-radius: 3px; }
+  border-radius: 3px }
 
 #paymentpage-content-wrap {
   display: flex;
   width: 600px;
   flex-direction: column;
-  background: white; }
+  background: rgba(0, 0, 25, 0.9); /* as any other div background on the other pages */
+  color:white;
+  border-radius: 5px }
 
 #breadcrumb {
   display: flex;
@@ -431,13 +483,26 @@ button:hover {
   background: darkgray; }
 
 .payment-step-warnings {
-  background: yellow; }
+  background: yellow;
+  color:black;
+  padding:1em; }
 
 .paymentpage-confirmations .rows,
 #paymentpage-payment-form .rows {
   display: flex;
+  padding: 1em;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  background:rgba(255,255,255,0.9);
+  color:black;
+  border-bottom:1px solid gray }
+  
+.paymentpage-confirmations .rows:last-of-type,
+#paymentpage-payment-form .rows:last-of-type {
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	border-bottom:none;
+}
 
 .paymentpage-confirmations .row-titles:after {
   content: ':'; }
@@ -461,13 +526,16 @@ button:hover {
 .breadcrumb-nav-buttons {
   width: 100%;
   padding: 1em;
-  background: darkviolet; }
+  background: rgba(0, 0, 25, 0.9); /* as many other divs on the other pages */
+  color:white;
+  border-radius:3px;
+  font-size:16px; }
 
 .breadcrumb-nav-buttons:first-of-type {
   margin-right: 1em; }
 
 /* ============================================== */
-/* TABLET VERSION STARTS HERE --- The desktop version is contained within the tablet version
+/* TABLET VERSION STARTS HERE --- .the desktop version is contained within .the tablet version
 /* ============================================== */
 @media screen and (min-width: 667px) {
   #main-nav-menu {
