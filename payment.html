@@ -111,8 +111,8 @@
 							</div>
                             
                         	<div class="rows">
-                            	<button class="breadcrumb-nav-buttons">Modify</button>
-                            	<button class="breadcrumb-nav-buttons">Proceed</button>
+                            	<button class="breadcrumb-nav-buttons" id="flight-confirmation-back">Modify</button>
+                            	<button class="breadcrumb-nav-buttons" id="flight-confirmation-forth">Proceed</button>
                             </div>
                         </div>
                     </div>
@@ -219,8 +219,8 @@
                             </div class="fieldset">
                                 
                             <div class="rows">
-                                <button class="breadcrumb-nav-buttons">Back</button>
-                                <button class="breadcrumb-nav-buttons">Next</button>
+                                <button class="breadcrumb-nav-buttons" id="payment-details-back">Back</button>
+                                <button class="breadcrumb-nav-buttons" id="payment-details-forth">Next</button>
                             </div>
                         </form>
                     </div>
@@ -255,8 +255,8 @@
 							</div>
                             
                         	<div class="rows">
-                            	<button class="breadcrumb-nav-buttons">Modify</button>
-                            	<button class="breadcrumb-nav-buttons">Checkout</button>
+                            	<button class="breadcrumb-nav-buttons" id="payment-confirmation-forth">Modify</button>
+                            	<button class="breadcrumb-nav-buttons" id="payment-confirmation-forth">Checkout</button>
                             </div>
                         </div>
                     </div>
@@ -265,5 +265,31 @@
         </section>
     </div>
     
+    <script>
+	// Clicking on 'breadcrumb-nav-buttons':
+	document.querySelector('#flight-confirmation-back').onclick = function(e){
+	  alert('you will be returned to modify page later. Now please use only forth buttons for test purposes.');
+	}
+	document.querySelector('#flight-confirmation-forth').onclick = function(e){
+		document.querySelector('#flight-confirmation-content-wrap').style.display = "none";
+		document.querySelector('#payment-details').style.display = "block";
+	}
+	document.querySelector('#payment-info-back').onclick = function(e){
+		document.querySelector('#flight-confirmation-content-wrap').style.display = "block";
+		document.querySelector('#payment-details').style.display = "none";
+	}
+	document.querySelector('#payment-info-forth').onclick = function(e){
+		document.querySelector('#payment-details').style.display = "none";
+		document.querySelector('#payment-confirmation-content-wrap').style.display = "block";
+	}
+	document.querySelector('#payment-confirmation-back').onclick = function(e){
+		document.querySelector('#payment-details').style.display = "block";
+		document.querySelector('#payment-confirmation-content-wrap').style.display = "none";
+	}
+	document.querySelector('#payment-confirmation-forth').onclick = function(e){
+	  alert('you will be returned to payment confirmation page later. Now please use only back buttons for test purposes.');
+	}
+
+    </script>
 </body>
 </html>
