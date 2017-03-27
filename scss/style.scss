@@ -77,8 +77,7 @@ input[type="range"]{
 .input-wraps {
 	display:flex;
     margin-bottom: 1.4em;
-	flex-direction: row;
-    justify-content: space-between;
+	flex-direction: column; 
 }
 
 .list-items {
@@ -254,7 +253,6 @@ button:hover{
 }
 
 #homepage-first-widgets-container {
-	position:absolute;
 	top:0;
 	margin-top:50px;
 	display:flex;
@@ -370,26 +368,39 @@ button:hover{
 
 #search-filter-wrap {
 	background:rgba(255,255,255,0.8);
-	min-width:450px; /* use min-width so flex-box won't collapse it on resize! */
-	max-width:500px;
-	margin-right:1em;
 	padding:10px;
 	border-radius:3px;
-	margin-bottom:30px;
+	margin:0 1em 30px 0;
+	max-width: 780px; /* same as #search-results-wrap */
+    min-width: 0; /* same as #search-results-wrap */ 
 }
 
 #search-results-wrap {
 	background:rgba(0,0,25,0.9);
 	color:white;
 	padding:10px;
-	//Could not use the width below, it interferred with our design choices
-	min-width:750px;
-	max-width:780px;
-	//width:100%;  /* use normal width so flex-box can stretch it on resize! */
+	width:65%;  /* use normal width so flex-box can stretch it on resize! */
+	min-width: 400px;
 	//height:10em;
 	border-radius:3px;
 	margin-bottom:30px;
 }
+
+@media screen and (max-width: 859px){
+     #search-filter-wrap {
+		width: 100%;
+   		min-width: 400px; /* same as #search-results-wrap */
+     	margin: 30px 0 0 0;
+ 		border-bottom-left-radius:0;
+ 		border-bottom-right-radius:0;
+ 	}
+ 	
+ 	#search-results-wrap{
+ 		width:100%;
+ 		border-top-left-radius:0;
+ 		border-top-right-radius:0;
+ 	}
+ }
 
 #search-filter-form{
 	display:flex;
@@ -452,17 +463,51 @@ button:hover{
 	}
 
 #search-results {
-	//background:green;
+	display:flex;
 	width:100%;
 	text-align:left;
 	padding:10px;
 	margin-top:10px;
-	border-radius:3px;
-}
-#search-results th{
+	border-radius: 3px;
+ 	flex-direction:column;
+    }
+ 
+ #search-results .tr {
+ 	display:flex;
+ 	flex-direction:row;
+ 	justify-content:space-between;
+ }
+ 
+ #search-results .th {
+ 	display:block;
+ 	margin:0.5em;
 	font-weight:400 !important;
-	font-size:1.2em;
-}
+	font-size: 1.2em;
+   	text-align:center;
+   	flex:1;
+ 	flex-basis:17.5% }
+ 
+ #search-results .td {
+ 	display:block;
+ 	margin:1px;
+    background:rgba(255,0,4,0.15);
+    padding:0.5em;
+   	text-align:center;
+   	flex:1;
+ 	flex-basis:17.5%; }
+ 	
+ @media screen and (max-width: 1030px){
+ 	#search-results .td:nth-child(2),
+ 	#search-results .td:nth-child(4),
+ 	#search-results .td:nth-child(5),
+ 	#search-results .td:nth-child(6),
+ 	#search-results .th:nth-child(2),
+ 	#search-results .th:nth-child(4),
+ 	#search-results .th:nth-child(5),
+ 	#search-results .th:nth-child(6){
+ 		display:none
+ 	}
+ }
 
 
 
@@ -493,8 +538,10 @@ button:hover{
 	display:flex;
 	width:600px;
 	flex-direction:column;
-	background:white;
-}
+	background: white; 
+    background: rgba(0, 0, 25, 0.9); /* as any other div background on the other pages */
+    color:white;
+    border-radius: 5px }
 
 #breadcrumb {
 	display:flex;
@@ -517,7 +564,9 @@ button:hover{
 }
 
 .payment-step-warnings {
-	background:yellow;
+	background: yellow;
+    color:black;
+    padding:1em; 
 }
 
 .paymentpage-confirmations .rows,
@@ -525,6 +574,17 @@ button:hover{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
+	background:rgba(255,255,255,0.9);
+    color:black;
+    border-bottom:1px solid gray 
+    }
+
+    .paymentpage-confirmations .rows:last-of-type,
+    #paymentpage-payment-form .rows:last-of-type {
+ 	border-bottom-left-radius:5px;
+ 	border-bottom-right-radius:5px;
+ 	border-bottom:none;
+ 	padding: 1em;
 }
 
 .paymentpage-confirmations .row-titles:after {
@@ -550,7 +610,10 @@ button:hover{
 .breadcrumb-nav-buttons {
 	width:100%;
 	padding:1em;
-	background:darkviolet;
+	background: rgba(0, 0, 25, 0.9); /* as many other divs on the other pages */
+    color:white;
+    border-radius:3px;
+    font-size:16px; 
 }
 
 .breadcrumb-nav-buttons:first-of-type {
