@@ -207,6 +207,53 @@ button:hover {
   border-radius: 5px; }
 
 /* ============================================== */
+/* BUTTONS:
+/* ============================================== */
+#homepage-new-search-submit-button {
+  margin: 0 auto;
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 2em;
+  color: grey;
+  font-size: 16px;
+  font-weight: 400 !important;
+  border-radius: 3px; }
+
+.more-boxes {
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  height: 2em;
+  background: lightgray;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  border-radius: 3px;
+  margin-bottom: 10px; }
+
+.more-boxes .circles {
+  width: 0.3em;
+  height: 0.3em;
+  margin: 0.1em;
+  border-radius: 100%;
+  background: gray; }
+
+.normal-buttons {
+  width: 100%;
+  padding: 1em;
+  background: rgba(0, 0, 25, 0.9);
+  /* as many other divs on the other pages */
+  color: white;
+  border-radius: 3px;
+  font-size: 16px; }
+
+.normal-buttons:first-of-type {
+  margin-right: 1em; }
+
+/* ============================================== */
 /* HOME PAGE:
 /* ============================================== */
 .screen-size-sections {
@@ -292,18 +339,6 @@ button:hover {
   font-size: 2em;
   font-weight: 400 !important;
   color: orange; }
-
-#homepage-new-search-submit-button {
-  margin: 0 auto;
-  background: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 200px;
-  height: 2em;
-  color: grey;
-  font-size: 16px;
-  font-weight: 400 !important;
-  border-radius: 3px; }
 
 /* ============================================== */
 /* RESULTS PAGE:
@@ -570,18 +605,6 @@ button:hover {
   width:100%;
 }
 
-.breadcrumb-nav-buttons {
-  width: 100%;
-  padding: 1em;
-  background: rgba(0, 0, 25, 0.9);
-  /* as many other divs on the other pages */
-  color: white;
-  border-radius: 3px;
-  font-size: 16px; }
-
-.breadcrumb-nav-buttons:first-of-type {
-  margin-right: 1em; }
-
 /* ============================================== */
 /* REGISTRATION PAGE:
 /* ============================================== */
@@ -619,6 +642,49 @@ button:hover {
 
 .submit-buttons:first-of-type {
   margin-right: 1em; }
+
+/* ============================================== */
+/* LOGIN PAGE:
+/* ============================================== */
+#loginpage-section1 {
+  padding-top: 60px;
+  /* same as '#main-header-bar-wrap' height */ }
+
+#loginpage-widget-container {
+  /* same properties as '#homepage-first-widgets-container' has */
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  align-items: stretch;
+  justify-content: space-around;
+  border-radius: 3px }
+
+#loginpage-content-wrap {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  background: white;
+  background: rgba(0, 0, 25, 0.9);
+  /* as any other div background on the other pages */
+  color: white;
+  border-radius: 5px; }
+
+#loginpage-content-wrap {
+  width:350px;
+}
+#loginpage-content .input-wraps {
+  flex-direction:row;
+  justify-content:space-between; }
+
+#loginpage-content .input-wraps * {
+  width:50%;
+}
+
+/* ============================================== */
+/* CONFIRMATION PAGE:
+/* ============================================== */
+#confirmationpage-content p {
+  margin-bottom:1em; }
 
 /* ============================================== */
 /* TABLET VERSION STARTS HERE --- .the desktop version is contained within .the tablet version
