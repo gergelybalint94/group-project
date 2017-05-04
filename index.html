@@ -42,46 +42,46 @@
                 <!-- //////////////////////////////////// -->
                 <div class="homepage-first-widgets" id="homepage-widget-search-new">
                 	<h1 class="homepage-widget-titles">New Search</h1>
-                    <form class="widget-main-content" id="homepage-new-search-form">
+                    <form class="widget-main-content" id="homepage-new-search-form" action="results.html" method="get">
                     
                     	<!-- FROM: -->
                     	<div class="input-wraps">
                             <label for="start-destination">From</label>
-                            <input type="text" name="start-destination" id="start-destination" class="input-field" placeholder="Select where you want to fly from">
+                            <input type="text" name="start-destination" id="start-destination" class="input-field" placeholder="Select where you want to fly from" required>
                         </div>
                         
                         <!-- TO: -->
                         <div class="input-wraps">
                             <label for="final-destination">To</label>
-                            <input type="text" name="final-destination" id="final-destination" class="input-field" placeholder="Select where you want to fly to">
+                            <input type="text" name="final-destination" id="final-destination" class="input-field" placeholder="Select where you want to fly to" required>
                         </div>
                         
                         <!-- DEPARTURE: -->
                         <div class="input-wraps">
                             <label for="start-date">Departure</label>
-                            <input type="date" name="start-date" class="input-field" id="start-date">
+                            <input type="date" name="start-date" class="input-field" id="start-date" required>
                         </div>
                         
                         <!-- ARRIVAL: -->
                         <div class="input-wraps">
                             <label for="final-date">Arrival</label>
-                            <input type="date" name="final-date" class="input-field" id="final-date">
+                            <input type="date" name="final-date" class="input-field" id="final-date" required>
                         </div>
                         
                         <!-- PASSENGERS: -->
                         <div class="input-wraps">
                             <label for="passengers">Passengers</label>
-                            <input type="number" name="passengers" class="input-field" id="passengers" min="1" max="5">
+                            <input type="number" name="passengers" class="input-field" id="passengers" min="1" max="5" required>
                         </div>
                         
                         <!-- TICKET TYPE: -->
                         <div class="input-wraps" id="ticket-type-inputs-wrap">
                             <label for="retur"><input type="radio" name="ticket-type" value="return">Return</label>
-                            <label for="one-way"><input type="radio" name="ticket-type" value="one-way">One way</label>
+                            <label for="one-way"><input type="radio" name="ticket-type" value="one-way" checked="checked" >One way</label>
                         </div>
-                        
+                        <button id="homepage-new-search-submit-button">Search</button>
                     </form>
-                    <button id="homepage-new-search-submit-button">Search</button>
+                    
                 </div>
             
             
