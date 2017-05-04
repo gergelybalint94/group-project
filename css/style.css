@@ -458,6 +458,7 @@ button:hover {
   #search-results .th:nth-child(5),
   #search-results .th:nth-child(6) {
     display: none; } }
+
 /* ============================================== */
 /* PAYMENT PAGE:
 /* ============================================== */
@@ -533,8 +534,8 @@ button:hover {
   flex-direction: row; }
 
 #phone-inputs-wrap #prefix {
-	min-width:3em;
-	max-width:3em;
+  min-width:3em;
+  max-width:3em;
   margin-right: 0.5em; }
 
 #contact-info-container {
@@ -544,29 +545,29 @@ button:hover {
   justify-content: space-between; }
 
 #contact-info-container div {
-	display:flex;
-	width:50%;
-	flex-direction:column;
+  display:flex;
+  width:50%;
+  flex-direction:column;
 }
 
 #contact-info-container div {
-	display:flex;
-	width:50%;
-	flex-direction:column;
+  display:flex;
+  width:50%;
+  flex-direction:column;
 }
 
 #contact-info-container div:first-of-type {
-	margin-right:1em;
+  margin-right:1em;
 }
 
 #contact-info-container div .input-wraps {
-	display:flex;
-	width:100%;
-	flex-direction:row;
+  display:flex;
+  width:100%;
+  flex-direction:row;
 }
 
 #contact-info-container div .input-wraps #phone {
-	width:100%;
+  width:100%;
 }
 
 .breadcrumb-nav-buttons {
@@ -579,6 +580,44 @@ button:hover {
   font-size: 16px; }
 
 .breadcrumb-nav-buttons:first-of-type {
+  margin-right: 1em; }
+
+/* ============================================== */
+/* REGISTRATION PAGE:
+/* ============================================== */
+#registrationpage-section1 {
+  padding-top: 60px;
+  /* same as '#main-header-bar-wrap' height */ }
+
+#registrationpage-widget-container {
+  /* same properties as '#homepage-first-widgets-container' has */
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  align-items: stretch;
+  justify-content: space-around;
+  border-radius: 3px }
+
+#registrationpage-content-wrap {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  background: white;
+  background: rgba(0, 0, 25, 0.9);
+  /* as any other div background on the other pages */
+  color: white;
+  border-radius: 5px; }
+
+.submit-buttons {
+  width: 100%;
+  padding: 1em;
+  background: rgba(0, 0, 25, 0.9);
+  /* as many other divs on the other pages */
+  color: white;
+  border-radius: 3px;
+  font-size: 16px; }
+
+.submit-buttons:first-of-type {
   margin-right: 1em; }
 
 /* ============================================== */
