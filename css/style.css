@@ -129,6 +129,9 @@ label {
 button:hover {
   cursor: pointer; }
 
+.input-field{
+  padding:15px;
+}
 /* ============================================== */
 /* NAVIGATION MENU BAR:
 /* ============================================== */
@@ -177,7 +180,7 @@ button:hover {
 #main-header-bar-wrap {
   z-index: 999;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   align-items: center;
