@@ -1,0 +1,1 @@
+$("#main-header-bar-wrap").load("parts/navbar.html");
