@@ -19,5 +19,5 @@ console.log(localStorage.getItem('passengers'));
 
 // Redirect to certain pages when clicking on elements with 'data-href' attribute:
 $(document).on('click', '[data-href]', function(){
-	alert();
+	window.location.href = $( this ).attr('data-href');
 })
