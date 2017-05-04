@@ -129,6 +129,9 @@ label {
 button:hover {
   cursor: pointer; }
 
+.input-field{
+  padding:15px;
+}
 /* ============================================== */
 /* NAVIGATION MENU BAR:
 /* ============================================== */
