@@ -15,6 +15,31 @@ $(document).on('click', '#homepage-new-search-submit-button', function(){
 	localStorage.setItem('passengers', passengers);
 });
 
+// use the saved search details to generate matching flights
+var replaceFrom = $("body").html().replace('{{from}}', localStorage.getItem("startDestination"));
+$("body").html(replaceFrom);
+var replaceTo = $("body").html().replace('{{to}}', localStorage.getItem("finalDestination"));
+$("body").html(replaceTo);
+if (localStorage.getItem("startDestination") === null) {
+  alert("This page should only be visited after you filled out the search form");
+}else{
+	for (var i=0; i < 5; i++) {
+		$("#search-results").append(
+			"<div class='tr'>\
+	                    	<div class='td'>	Russian</div>\
+	                    	<div class='td'>	#RUS14478</div>\
+	                    	<div class='td'>	"+localStorage.getItem('startDate')+"</div>\
+	                    	<div class='td'>	"+localStorage.getItem('finalDate')+"</div>\
+	                    	<div class='td'>	8:16</div>\
+	                        <div class='td'>No</div>\
+	                        <div class='td'>Economy</div>\
+	                        <div class='td'>299kr</div>\
+	                    </div>"
+
+			);
+	};
+}
+
 // Redirect to certain pages when clicking on elements with 'data-href' attribute:
 $(document).on('click', '[data-href]', function(){
 	window.location.href = $( this ).attr('data-href');
@@ -51,5 +76,4 @@ $("#loginpage-content").on('submit', function(e){
 		e.preventDefault();	
 		console.log("sajnalom");
 	};
-
 });
