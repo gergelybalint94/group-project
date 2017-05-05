@@ -1,4 +1,4 @@
-/*LOADS THE NAVIGATION BAR*/
+// Load navigation bar:
 $('#main-header-bar-wrap').load('parts/navbar.html');
 
 // Save flight search infos to local storage:
@@ -14,11 +14,13 @@ $(document).on('click', '#homepage-new-search-submit-button', function(){
 	localStorage.setItem('finalDate', finalDate);
 	localStorage.setItem('passengers', passengers);
 });
+
 // Redirect to certain pages when clicking on elements with 'data-href' attribute:
 $(document).on('click', '[data-href]', function(){
-	alert();
-})
-// Save the registration information in the localstorage for later usage
+	window.location.href = $( this ).attr('data-href');
+});
+
+// Save the registration information in the localstorage for later usage:
 $(document).on('click', '#registration-button', function(){
 	var registrationUsername = $('#registration-username').val();
 	var registrationPassword = $('#registration-password').val();
@@ -37,7 +39,7 @@ $(document).on('click', '#registration-button', function(){
 });
 console.log(localStorage.getItem("registrationEmail"));
 
-//LOGIN FUNCTIONALITY
+// Login functionality:
 $("#loginpage-content").on('submit', function(e){
 	var loginUsername = $("#login-username").val();
 	var loginPassword = $("#login-password").val();
