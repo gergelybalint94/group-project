@@ -264,15 +264,11 @@ button:hover {
 /* ============================================== */
 .screen-size-sections {
   width: 100%;
+  height:100%;
   background: transparent;
   font-weight: 400;
   overflow-y: scroll;
 }
-
-#homepage-section1 {
-  display: flex;
-  align-items:top;
-  justify-content: center; }
 
 #homepage-first-widgets-container {
   top: 0;
