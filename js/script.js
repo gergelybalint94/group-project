@@ -1,5 +1,11 @@
-// Load navigation bar:
-$('#main-header-bar-wrap').load('parts/navbar.html');
+/*DECIDE IF ITS A LOGIN OR A LOGOUT*/
+if (localStorage.getItem("loggedIn") == "yes"){
+	// Load navigation bar:
+	$('#main-header-bar-wrap').load('parts/navbar2.html');
+}else{
+	console.log("bye");
+	$('#main-header-bar-wrap').load('parts/navbar.html');
+};
 
 // Save flight search infos to local storage:
 $(document).on('click', '#homepage-new-search-submit-button', function(){
@@ -16,16 +22,16 @@ $(document).on('click', '#homepage-new-search-submit-button', function(){
 });
 
 // use the saved search details to generate matching flights
-var replaceFrom = $("body").html().replace('{{from}}', localStorage.getItem("startDestination"));
-$("body").html(replaceFrom);
-var replaceTo = $("body").html().replace('{{to}}', localStorage.getItem("finalDestination"));
-$("body").html(replaceTo);
-if (localStorage.getItem("startDestination") === null) {
-  alert("This page should only be visited after you filled out the search form");
-}else{
-	for (var i=0; i < 5; i++) {
+
+if (localStorage.getItem("startDestination") !== null) {
+	var i;
+	
+	$("#start-destination").append(localStorage.getItem("startDestination"));
+	$("#final-destination").append(localStorage.getItem("finalDestination"));
+	for (i=0; i < 5; i++) {
+		
 		$("#search-results").append(
-			"<div>\
+  "<div>\
 				<div class='tr'>\
 	            	<div class='td'>	Russian</div>\
 	            	<div class='td'>	#RUS14478</div>\
@@ -40,9 +46,10 @@ if (localStorage.getItem("startDestination") === null) {
 					<div class='highlighted-buttons' data-href='payment.html'>Book now</div>\
 				</div>\
 			</div>"
+
 		);
 	};
-}
+};
 
 // Redirect to certain pages when clicking on elements with 'data-href' attribute:
 $(document).on('click', '[data-href]', function(){
@@ -76,11 +83,16 @@ $("#loginpage-content").on('submit', function(e){
 	var registrationPassword = localStorage.getItem("registrationPassword");
 	if(loginUsername == registrationUsername && loginPassword == registrationPassword){
 		console.log("bravo");
+		localStorage.setItem("loggedIn", "yes");
 	}else{
 		e.preventDefault();	
 		console.log("sajnalom");
 		console.log("haha wtf lol");
 	};
+});
+//LOGOUT
+$(document).on("click", "#logout-button", function(){
+	localStorage.setItem("loggedIn", "no");
 });
 
 // Open "book now" button container on results page:
