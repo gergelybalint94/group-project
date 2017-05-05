@@ -213,14 +213,6 @@ button:hover {
   border-radius: 5px; }
 
 /* ============================================== */
-/* SIDE BARS:
-/* ============================================== */
-.side-bars-left {
-  width:;
-  background:white;
-}
-
-/* ============================================== */
 /* BUTTONS:
 /* ============================================== */
 #homepage-new-search-submit-button {
@@ -706,8 +698,29 @@ button:hover {
 #accountpage-body {
   background-image:none; }
 
-#accountpage-content {
+#accountpage-content-wrap {
   background:red;
+  display:flex;
+  align-items:stretch;
+  justify-content:space-between;
+}
+
+#accountpage-sidebar {
+  min-width:300px;
+  background:white;
+}
+
+#accountpage-sidebar a {
+  display:block;
+  padding:1em;
+  border-bottom:1px solid lightgray;
+  text-decoration:none;
+  color:black;
+}
+
+#accountpage-content {
+  width:100%;
+  background:green;
 }
 
 
