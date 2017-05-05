@@ -546,7 +546,8 @@ button:hover {
   align-items: stretch;
   justify-content: space-between;
   background: gray;
-  color: white; }
+  color: white;
+  cursor:default; }
 
 #breadcrumb .steps {
   display: flex;

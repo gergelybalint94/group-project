@@ -12,7 +12,7 @@
         
         
         
-<body>
+<body id="paymentpage">
     
      <!-- =============================================================================== -->
     <!-- NAVIGATION MENU (FIXED POSITIONED):
@@ -38,16 +38,16 @@
                 <div id="paymentpage-content-wrap">
                 	<h1>Payment</h1>
                     <div id="breadcrumb">
-                    	<div class="steps active">Flight confirmation</div>
-                    	<div class="steps">Payment details</div>
-                    	<div class="steps">Payment confirmation</div>
+                    	<div class="steps active" data-step-no="1">Flight confirmation</div>
+                    	<div class="steps" data-step-no="2">Payment details</div>
+                    	<div class="steps" data-step-no="3">Payment confirmation</div>
                     </div>
             
             
             
                     <!-- FLIGHT CONFIRMATION:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:none" class="main-content-of-payment-steps" id="flight-confirmation-content-wrap">
+                    <div style="display:block" class="main-content-of-payment-steps" id="flight-confirmation-content-wrap" data-step-no="1">
                     	<h1 class="payment-step-titles">Your flight</h1>
                         <p class="payment-step-warnings">Check all your flight information carefully. Confirm that every detail is correct by clicking on proceed button. You can not modify flight info after you submit your payment.</p>
                         <div class="paymentpage-confirmations" id="flight-confirmation">
@@ -102,9 +102,9 @@
                                 <span id="flight-class">Business class</span>
 							</div>
                             
-                        	<div class="rows">
-                            	<button class="normal-buttons">Modify</button>
-                            	<button class="normal-buttons">Proceed</button>
+                        	<div class="rows" data-step-no="1">
+                            	<button class="normal-buttons back-buttons">Modify</button>
+                            	<button class="normal-buttons next-buttons">Proceed</button>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
             
                     <!-- PAYMENT DETAILS:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:block" class="main-content-of-payment-steps" id="payment-details">
+                    <div style="display:none" class="main-content-of-payment-steps" id="payment-details" data-step-no="2">
                     	<h1 class="payment-step-titles">Payment details</h1>
                         <form id="paymentpage-payment-form">
                         
@@ -210,9 +210,9 @@
                                 </div>
                             </div class="fieldset">
                                 
-                            <div class="rows">
-                                <button class="normal-buttons">Back</button>
-                                <button class="normal-buttons">Next</button>
+                            <div class="rows" data-step-no="2">
+                                <button class="normal-buttons back-buttons">Back</button>
+                                <button class="normal-buttons next-buttons">Next</button>
                             </div>
                         </form>
                     </div>
@@ -221,7 +221,7 @@
             
                     <!-- PAYMENT CONFIRMATION:
                     <!-- //////////////////////////////////// -->
-                    <div style="display:none" class="main-content-of-payment-steps" id="payment-confirmation-content-wrap">
+                    <div style="display:none" class="main-content-of-payment-steps" id="payment-confirmation-content-wrap" data-step-no="3">
                     	<h1 class="payment-step-titles">Your flight</h1>
                         <p class="payment-step-warnings">Check all your payment information carefully. If everything seems correct, confirm payment by clicking on the checkout button. After this point there is no way to modify payment and flight data.</p>
                         <div class="paymentpage-confirmations" id="payment-confirmation">
@@ -246,9 +246,9 @@
                                 <span id="confirmation-price">299kr</span>
 							</div>
                             
-                        	<div class="rows">
-                            	<button class="normal-buttons">Modify</button>
-                            	<button class="normal-buttons">Checkout</button>
+                        	<div class="rows" data-step-no="3">
+                            	<button class="normal-buttons back-buttons">Modify</button>
+                            	<button class="normal-buttons next-buttons">Checkout</button>
                             </div>
                         </div>
                     </div>
