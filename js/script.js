@@ -103,9 +103,13 @@ $(document).on('click', '#search-results .tr', function(){
 
 // Navigation among steps on payment page:
 $(document).on('click', '#paymentpage .normal-buttons', function(){
+
+	
 	var iActualStepNo	= $( this ).parent().attr('data-step-no');
 		iActualStepNo	= parseInt(iActualStepNo);
-		iNextStepNo		= iActualStepNo + 1;
+
+	( $(this).hasClass('next-buttons') ) ? iNextStepNo = iActualStepNo + 1 : iNextStepNo = iActualStepNo - 1;
+		
 		console.log('iActualStepNo: ' + iActualStepNo);
 		console.log('iNextStepNo: ' + iNextStepNo);
 
