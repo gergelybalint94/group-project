@@ -31,16 +31,22 @@ if (localStorage.getItem("startDestination") !== null) {
 	for (i=0; i < 5; i++) {
 		
 		$("#search-results").append(
-			"<div class='tr'>\
-	           	<div class='td'>	Russian</div>\
-	           	<div class='td'>	#RUS14478</div>\
-	           	<div class='td'>	"+localStorage.getItem('startDate')+"</div>\
-	          	<div class='td'>	"+localStorage.getItem('finalDate')+"</div>\
-	          	<div class='td'>	8:16</div>\
-	            <div class='td'>No</div>\
-	            <div class='td'>Economy</div>\
-	            <div class='td'>299kr</div>\
-	        </div>"
+  "<div>\
+				<div class='tr'>\
+	            	<div class='td'>	Russian</div>\
+	            	<div class='td'>	#RUS14478</div>\
+	            	<div class='td'>	"+localStorage.getItem('startDate')+"</div>\
+	            	<div class='td'>	"+localStorage.getItem('finalDate')+"</div>\
+	            	<div class='td'>	8:16</div>\
+	                <div class='td'>No</div>\
+	                <div class='td'>Economy</div>\
+	                <div class='td'>299kr</div>\
+	            </div>\
+				<div class='tr-after'>\
+					<div class='highlighted-buttons' data-href='payment.html'>Book now</div>\
+				</div>\
+			</div>"
+
 		);
 	};
 };
@@ -81,10 +87,35 @@ $("#loginpage-content").on('submit', function(e){
 	}else{
 		e.preventDefault();	
 		console.log("sajnalom");
+		console.log("haha wtf lol");
 	};
 });
-
 //LOGOUT
 $(document).on("click", "#logout-button", function(){
 	localStorage.setItem("loggedIn", "no");
 });
+
+// Open "book now" button container on results page:
+$(document).on('click', '#search-results .tr', function(){
+	$( '.tr-after' ).slideUp();
+	$( this ).parent().find('.tr-after').stop().slideDown();
+});
+
+// Navigation among steps on payment page:
+$(document).on('click', '#paymentpage .next-buttons', function(){alert();
+	var iActualStepNo	= $( this ).parent().attr('data-step-no');
+		iActualStepNo	= parseInt(iActualStepNo);
+		iNextStepNo		= iActualStepNo + 1;
+		console.log('iActualStepNo: ' + iActualStepNo);
+		console.log('iNextStepNo: ' + iNextStepNo);
+
+	// Mark actual step in breadcrumb:
+	$('#paymentpage #breadcrumb .steps').removeClass('active');
+	$('#paymentpage #breadcrumb [data-step-no="' + iNextStepNo + '"]').addClass('active');
+
+	// Show actual step content:
+	$('#paymentpage .main-content-of-payment-steps').hide();
+	$('#paymentpage .main-content-of-payment-steps[data-step-no="' + iNextStepNo + '"]').show();
+});
+
+

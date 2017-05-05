@@ -247,17 +247,25 @@ button:hover {
   border-radius: 100%;
   background: gray; }
 
-.normal-buttons {
+.normal-buttons,
+.highlighted-buttons {
   width: 100%;
   padding: 1em;
   background: rgba(0, 0, 25, 0.9);
   /* as many other divs on the other pages */
   color: white;
   border-radius: 3px;
-  font-size: 16px; }
+  font-size: 16px;
+  cursor:pointer; }
 
 .normal-buttons:first-of-type {
   margin-right: 1em; }
+.highlighted-buttons {
+  background:rgba(255, 204, 0, 1);
+  color:black;
+  font-weight:bold;
+  text-align:center;
+}
 
 /* ============================================== */
 /* HOME PAGE:
@@ -467,6 +475,14 @@ button:hover {
   flex-direction: row;
   justify-content: space-between; }
 
+#search-results .tr:hover .td {
+  cursor:pointer;
+  background: rgba(255, 0, 4, 0.3); }
+
+#search-results .tr-after {
+  display:none;
+  padding:1em 0 2em 0; }
+
 #search-results .th {
   display: block;
   margin: 0.5em;
@@ -483,7 +499,8 @@ button:hover {
   padding: 0.5em;
   text-align: center;
   flex: 1;
-  flex-basis: 17.5%; }
+  flex-basis: 17.5%;
+  transition: 0.2s; }
 
 @media screen and (max-width: 1030px) {
   #search-results .td:nth-child(2),
@@ -529,7 +546,8 @@ button:hover {
   align-items: stretch;
   justify-content: space-between;
   background: gray;
-  color: white; }
+  color: white;
+  cursor:default; }
 
 #breadcrumb .steps {
   display: flex;
@@ -632,18 +650,6 @@ button:hover {
   /* as any other div background on the other pages */
   color: white;
   border-radius: 5px; }
-
-.submit-buttons {
-  width: 100%;
-  padding: 1em;
-  background: rgba(0, 0, 25, 0.9);
-  /* as many other divs on the other pages */
-  color: white;
-  border-radius: 3px;
-  font-size: 16px; }
-
-.submit-buttons:first-of-type {
-  margin-right: 1em; }
 
 /* ============================================== */
 /* LOGIN PAGE:
