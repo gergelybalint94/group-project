@@ -359,6 +359,7 @@ button:hover {
 
 #search-filter-wrap {
   background: rgba(255, 255, 255, 0.8);
+  overflow:scroll;
   /* use min-width so flex-box won't collapse it on resize! */
   margin:0 1em 30px 0;
   padding: 10px;
@@ -697,8 +698,29 @@ button:hover {
 #accountpage-body {
   background-image:none; }
 
-#accountpage-content {
+#accountpage-content-wrap {
   background:red;
+  display:flex;
+  align-items:stretch;
+  justify-content:space-between;
+}
+
+#accountpage-sidebar {
+  min-width:300px;
+  background:white;
+}
+
+#accountpage-sidebar a {
+  display:block;
+  padding:1em;
+  border-bottom:1px solid lightgray;
+  text-decoration:none;
+  color:black;
+}
+
+#accountpage-content {
+  width:100%;
+  background:green;
 }
 
 
