@@ -90,7 +90,7 @@ $(document).on('click', '#search-results .tr', function(){
 });
 
 // Navigation among steps on payment page:
-$(document).on('click', '#paymentpage .next-buttons', function(){alert();
+$(document).on('click', '#paymentpage .normal-buttons', function(){
 	var iActualStepNo	= $( this ).parent().attr('data-step-no');
 		iActualStepNo	= parseInt(iActualStepNo);
 		iNextStepNo		= iActualStepNo + 1;
