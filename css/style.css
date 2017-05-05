@@ -16,12 +16,15 @@
 /* GLOBAL STYLE:
 /* ============================================== */
 body {
+  display:flex;
+  flex-direction:column;
+
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  margin-top: 557px; }
+}
 
 html,
 body {
@@ -93,10 +96,11 @@ input[type="range"] {
   margin-top: 2em; }
 
 .page-content-wraps {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
-  max-width: 1280px; }
+  max-width: 1280px;
+  align-items: top; }
 
 .more-boxes {
   display: flex;
@@ -180,7 +184,6 @@ button:hover {
 #main-header-bar-wrap {
   z-index: 999;
   display: flex;
-  position: fixed;
   top: 0;
   left: 0;
   align-items: center;
@@ -262,18 +265,17 @@ button:hover {
 .screen-size-sections {
   width: 100%;
   background: transparent;
-  font-weight: 400; }
+  font-weight: 400;
+  overflow-y: scroll;
+}
 
 #homepage-section1 {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
-  /* same as '#main-header-bar-wrap' height */ }
+  align-items:top;
+  justify-content: center; }
 
 #homepage-first-widgets-container {
   top: 0;
-  margin-top: 50px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -690,14 +692,34 @@ button:hover {
   margin-bottom:1em; }
 
 /* ============================================== */
+/* ACCOUNT PAGE:
+/* ============================================== */
+#accountpage-body {
+  background-image:none; }
+
+#accountpage-content {
+  background:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================== */
 /* TABLET VERSION STARTS HERE --- .the desktop version is contained within .the tablet version
 /* ============================================== */
 @media screen and (min-width: 667px) {
   #main-nav-menu {
-    display: flex; }
-
-  body {
-    margin-top: 80px !important; }
+    display: flex; }}
 
   #site-logo {
     width: 60px;
